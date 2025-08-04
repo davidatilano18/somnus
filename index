@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SOMNUS | Sleep Health Analytics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #34495e;
+      --accent: #e74c3c;
+      --text: #ecf0f1;
+      --text-secondary: #bdc3c7;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: var(--primary);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+      url('https://images.unsplash.com/photo-1595231767937-5581340f2fbf?auto=format&fit=crop&w=2100&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+    }
+
+    nav {
+      background-color: var(--secondary);
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+
+
+    h1 {
+      font-size: 4rem;
+      margin: 0;
+      color: white;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5);
+      letter-spacing: 5px;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      color: var(--text);
+      margin-top: 15px;
+      letter-spacing: 2px;
+    }
+
+    .author {
+      margin-top: 30px;
+      font-style: italic;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background-color: var(--secondary);
+      border-radius: 8px;
+      padding: 30px;
+      margin: 30px 0;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin: 30px 0;
+    }
+
+    .card {
+      background-color: #3d566e;
+      padding: 20px;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .chart-container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+      color: black;
+    }
+
+    .chart-title {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .chart-placeholder img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .chart-description {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #2c3e50;
+    }
+
+    .conclusion {
+      background-color: var(--accent);
+      padding: 30px;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+
+    footer {
+      background-color: var(--secondary);
+      padding: 30px 0;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <img src="logo.png" alt="SOMNUS Logo" class="logo">
+      <h1>SOMNUS</h1>
+      <p class="tagline">Decoding Sleep Health Through Data Science</p>
+      <div class="author">
+        <p>David Atilano | Polytechnic University of Queretaro</p>
+        <p>124050317@upq.edu.mx</p>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#metodologia">Methodology</a>
+    <a href="#hallazgos">Findings</a>
+    <a href="#conclusion">Conclusion</a>
+  </nav>
+
+  <div class="container">
+    <div class="section">
+      <h2>Problem Description</h2>
+      <p>This project analyzes how factors like stress, physical activity, and work type influence sleep health. We seek to uncover patterns in quality and duration of sleep and suggest practical strategies to improve rest in daily life.</p>
+    </div>
+
+    <div class="section">
+      <h2>Research Objectives</h2>
+      <div class="grid">
+        <div class="card">
+          <h3><i class="fas fa-search"></i> Investigate Relationships</h3>
+          <p>Identify links between physical, mental, and occupational conditions with sleep data.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-chart-bar"></i> Statistical Analysis</h3>
+          <p>Use statistics and correlation techniques to discover trends.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-bullseye"></i> Identify Key Patterns</h3>
+          <p>Detect consistent behaviors and outliers related to poor sleep.</p>
+        </div>
+        <div class="card">
+          <h3><i class="fas fa-lightbulb"></i> Generate Insights</h3>
+          <p>Offer actionable conclusions that can improve sleep habits.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="metodologia">
+      <h2>Methodology</h2>
+      <div class="grid">
+        <div>
+          <h3>Dataset</h3>
+          <ul>
+            <li>374 records, 12 features</li>
+            <li>Python stack: Pandas, Seaborn, Matplotlib</li>
+            <li>Techniques: descriptive stats, correlation, t-tests</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Process</h3>
+          <ol>
+            <li>Data Collection</li>
+            <li>Cleaning and Preparation</li>
+            <li>Exploratory Analysis</li>
+            <li>Visualization and Interpretation</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="section" id="hallazgos">
+      <h2>Key Findings</h2>
+
+      <div class="chart-container">
+        <div class="chart-title">Sleep Disorder Distribution</div>
+        <div class="chart-placeholder">
+          <img src="pastel.png" alt="Sleep Disorder Distribution">
+        </div>
+        <p class="chart-description">This chart shows the percentage of users affected by different types of sleep disorders such as insomnia and sleep apnea.</p>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-title">Physical Activity vs Sleep Quality</div>
+        <div class="chart-placeholder">
+          <img src="physical_activity_vs_sleep_quality.png" alt="Activity vs Sleep Quality">
+        </div>
+        <p class="chart-description">People who engage in more physical activity tend to report higher sleep quality, with a clear positive trend.</p>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-title">Sleep Duration Distribution</div>
+        <div class="chart-placeholder">
+          <img src="distribuciondehoras.png" alt="Sleep Duration Distribution">
+        </div>
+        <p class="chart-description">The majority of participants sleep between 6 and 8 hours, with fewer reporting either very short or long durations.</p>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-title">Disorders by Occupation</div>
+        <div class="chart-placeholder">
+          <img src="disorderxocupacion.png" alt="Disorders by Occupation">
+        </div>
+        <p class="chart-description">Certain occupations—especially shift-based or high-stress jobs—have a higher prevalence of sleep-related issues.</p>
+      </div>
+    </div>
+
+    <div class="conclusion" id="conclusion">
+      <h2 style="color:white;">Conclusion</h2>
+      <p>This project reveals significant relationships between lifestyle and sleep. Physical activity improves sleep, while stress and work-related pressure worsen it. Our results serve as a base to promote sleep health programs and guide individuals toward better rest practices using real data.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>SOMNUS Sleep Research Project &copy; 2025 | Polytechnic University of Queretaro</p>
+      <p>Data Science for Health Innovation</p>
+    </div>
+  </footer>
+</body>
+</html>
+
